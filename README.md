@@ -1,6 +1,6 @@
 # :tada: Vite/Vuejs POC
 
-This a poc to test some new features of the vue framework in their version 3. 
+This is a poc with the objective to test some new features of the vue framework v. 3. 
 
 ## :rocket: Goals
 
@@ -14,7 +14,7 @@ This a poc to test some new features of the vue framework in their version 3.
 - [x] Manifest.json file to be used by a third backend party. 
 
 
-## How to build for produccion?
+## How to build for production?
 
 ```
 yarn build --mode production --base=/my-vue-app/
