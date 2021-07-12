@@ -1,23 +1,43 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Hello Vue 3 + Vite" />
-  <p> NAME {{ name }} </p>
+  <ul>
+    <li>Is DEV env: {{ isDev }} </li>
+    <li>Is Using dark theme?: {{ isDark }} </li>
+    <li>What Is my baseURL?: {{ baseURL }} </li>
+    <li>What Is my api server?: {{ apisrv }} </li>
+  </ul>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-import HelloWorld from './components/HelloWorld.vue'
-const name = import.meta.env.DEV
+import { usePreferredDark, useLocalStorage } from '@vueuse/core'
+// const name = import.meta.env.DEV
 
-console.log(name);
 export default {
   name: 'App',
   components: {
     HelloWorld
   },
+  setup() {
+    // is user prefers dark theme
+    const baseURL = import.meta.env.BASE_URL
+    const apisrv = import.meta.env.VITE_API_SERVER
+    const isDark = usePreferredDark()
+    const store = useLocalStorage(
+      'my-storage', 
+      {
+        name: 'Apple',
+        color: 'red',
+      },
+    )
+    
+     return { isDark, store, baseURL, apisrv }
+
+ },
  data: function () {
     return {
-      name: name
+      isDev: import.meta.env.DEV,
     }
   },
 }

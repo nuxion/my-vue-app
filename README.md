@@ -1,7 +1,26 @@
-# vite poc
+# :tada: Vite/Vuejs POC
+
+This a poc to test some new features of the vue framework in their version 3. 
+
+## :rocket: Goals
+
+- [x] Setup API without `<script setup>` 
+- [x] Use of environment variables with `import.meta...`
+- [x] .env files by environment
+- [x] Vite builder and server
+- [x] Tailwindcss framework with postcss
+- [x] Vueuse plugin
+- [x] Custom names for dist files instead of the default `index.[html, js..]`
+- [x] Manifest.json file to be used by a third backend party. 
 
 
-## resource
+## How to build for produccion?
+
+```
+yarn build --mode production --base=/my-vue-app/
+```
+
+## :pushpin: Resources / References
 - https://github.com/vueuse/vueuse
 - https://github.com/posva/pinia
 - https://headlessui.dev/vue/menu
