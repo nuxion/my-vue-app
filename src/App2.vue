@@ -1,27 +1,17 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
-  <p> NAME {{ name }} </p>
+  <img alt="Vue logo" src="./assets/logo.png">
+  <HelloWorld msg="Welcome to Your Vue.js App"/>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-import HelloWorld from './components/HelloWorld.vue'
-const name = import.meta.env.DEV
 
-console.log(name);
 export default {
   name: 'App',
   components: {
     HelloWorld
-  },
- data: function () {
-    return {
-      name: name
-    }
-  },
+  }
 }
-
 </script>
 
 <style>
